@@ -5,11 +5,11 @@ namespace Library
 {
     public class Character
     {
-        private int health;
-        private int attack {get; set;}
-        private int armor {get; set;}
-        private string name {get;}
-        private List<Item> inventory {get; set;}
+        protected int health;
+        protected int attack {get; set;}
+        protected int armor {get; set;}
+        protected string name {get; set;}
+        protected List<Item> inventory {get; set;}
 
         public int Health
         {
