@@ -10,8 +10,8 @@ namespace Program
         {
             Elf elf1 = new Elf("Elf1");
             Elf elf2 = new Elf("Elf2");
-            Item item1 = new Item("Fuego", 10, 0);
-            Item item2 = new Item("Escudo", 10, 5);
+            Sword item1 = new Sword("Espada de Fuego");
+            Armor item2 = new Armor("Escudo");
             elf1.EquipItem(item1);
             elf1.EquipItem(item2);
             
@@ -23,8 +23,8 @@ namespace Program
 
             /*Creacion de darkKnight y de los items sword y armor*/
             Knight darkKnight = new Knight("Dark Knight");
-            Item sword = new Item("Sword", 15, 0);
-            Item armor = new Item("Armor", 0, 20);
+            Sword sword = new Sword("Sword");
+            Armor armor = new Armor("Armor");
 
             /*Equipado de items a darkKnight*/
             darkKnight.EquipItem(sword);
@@ -63,7 +63,7 @@ namespace Program
             SpellBook libro = new SpellBook("Libro de hechizos.");
             Wizard brujo = new Wizard("Brujo", libro);
 
-            Item daga = new Item("Daga", 10, 40);
+            Sword daga = new Sword("Daga");
             brujo.EquipItem(daga);
 
             brujo.AttackEnemy(elf1);

@@ -10,7 +10,7 @@ namespace Test.Library
         public void EquipItem1()
         {
             Knight knight = new Knight("Dark Knight");
-            Item item = new Item("Espada", 20, 0);
+            Sword item = new Sword("Espada");
             int expectedDamage = 45;
             int expectedArmor = 35;
             knight.EquipItem(item);
@@ -24,7 +24,7 @@ namespace Test.Library
         public void EquipItem2()
         {
             Knight knight = new Knight("Dark Knight");
-            Item item = new Item("Armadura", 0, 20);
+            Armor item = new Armor("Armadura");
             int expectedDamage = 25;
             int expectedArmor = 55;
             knight.EquipItem(item);
@@ -38,7 +38,7 @@ namespace Test.Library
         public void UnequipItem()
         {
             Knight knight = new Knight("Dark Knight");
-            Item item = new Item("Espada", 20, 0);
+            Sword item = new Sword("Espada");
             int expectedDamage = 25;
             int expectedArmor = 35;
             knight.EquipItem(item);

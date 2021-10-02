@@ -29,7 +29,7 @@ namespace Test.Library
         public void EquipItemAttackTest()
         {
             Elf elfa = new Elf("Idril");
-            Item itemAtaque = new Item("Fuego", 15, 0);
+            Sword itemAtaque = new Sword("Espada de Fuego");
             elfa.EquipItem(itemAtaque);
             int expectedAttack = 35 + 15;
             int expectedArmor = 5;
@@ -42,7 +42,7 @@ namespace Test.Library
         public void EquipItemArmorTest()
         {
             Elf elfa = new Elf("Idril");
-            Item itemArmor = new Item("Pocion", 15, 0);
+            Armor itemArmor = new Armor("Armadura");
             elfa.EquipItem(itemArmor);
             int expectedAttack = 35 + 15;
             int expectedArmor = 5;
@@ -55,7 +55,7 @@ namespace Test.Library
         public void UnEquipItemTest()
         {
             Elf elfa = new Elf("Idril");
-            Item itemAtaque = new Item("Fuego", 15, 0);
+            Sword itemAtaque = new Sword("Espada de Fuego");
             elfa.EquipItem(itemAtaque);
             int expectedAttack = 35 + 15;
             Assert.AreEqual(expectedAttack, elfa.ReturnAttack());

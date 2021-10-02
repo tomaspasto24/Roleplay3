@@ -12,9 +12,9 @@ namespace Test.Library
         public void WizardTest()
         {
             Wizard brujo = new Wizard("Prueba1", new SpellBook("El libro de los encantamientos."));
-            brujo.EquipItem(new Item("Daga", 32, 0));
-            brujo.EquipItem(new Item("Arma de fuego M-92", 40, 0));
-            brujo.EquipItem(new Item("Botella", 4, 2));
+            brujo.EquipItem(new Staff("Staff de Hielo"));
+            brujo.EquipItem(new Sword("Daga"));
+            brujo.EquipItem(new Armor("Tunica de mago"));
                     
             Assert.IsNotNull(brujo);
             Assert.IsNotEmpty(brujo.ReturnInventory());
@@ -26,9 +26,9 @@ namespace Test.Library
         {
             SpellBook book = new SpellBook("El libro de los encantamientos.");
             Wizard brujo = new Wizard("Prueba1", book);
-            book.AddSpell(new Spell("Bola de fuego", "fuego", 13));
-            book.AddSpell(new Spell("Bola de nieve", "nieve", 16));
-            book.AddSpell(new Spell("Bola de granizo", "granizo", 20));
+            book.AddSpell(new FireElement("Bola de fuego"));
+            book.AddSpell(new WaterElement("Bola de nieve"));
+            book.AddSpell(new MudElement("Bola de barro"));
 
             Assert.IsNotEmpty(book.GetSpells());
             Assert.IsNotNull(book.spellsCount);
