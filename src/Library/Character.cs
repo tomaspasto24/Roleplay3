@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Library
 {
@@ -21,7 +22,28 @@ namespace Library
                 this.health = value;
             }
         }
+        
+        /// <summary>
+        /// Metodo para equipar un item pasado por parametro, que a su vez incrementa el ataque y defensa del Knight (dependiendo del item que sea).
+        /// </summary>
+        /// <param name="item">Item a equipar</param>
+        public void EquipItem(Item item)
+        {
+            this.inventory.Add(item);
+            this.attack = this.attack + item.ReturnDamage();
+            this.armor = this.armor + item.ReturnArmor();
+        }
 
+        /// <summary>
+        /// Metodo para desequipar un item que pasemos por parametro, a su vez se decrementan las estadisticas correspondientes del Knight.
+        /// </summary>
+        /// <param name="item">Item a desequipar</param>
+        public void UnequipItem(Item item)
+        {
+            this.attack = this.attack - item.ReturnDamage();
+            this.armor = this.armor - item.ReturnArmor();
+            this.inventory.Remove(item);
+        }
         public void AttackEnemy(ICharacter characterEnemy)
         {
             Console.WriteLine($"Se atacó a {characterEnemy.ReturnName()}.");
