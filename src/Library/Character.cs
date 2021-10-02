@@ -4,7 +4,7 @@ namespace Library
 {
     public class Character
     {
-        protected int health;s
+        protected int health;
         protected int attack {get; set;}
         protected int armor {get; set;}
         protected string name {get; set;}
