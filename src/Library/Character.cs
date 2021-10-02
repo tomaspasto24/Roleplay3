@@ -44,7 +44,7 @@ namespace Library
             this.armor = this.armor - item.ReturnArmor();
             this.inventory.Remove(item);
         }
-        public void AttackEnemy(ICharacter characterEnemy)
+        public void AttackEnemy(Character characterEnemy)
         {
             Console.WriteLine($"Se atacó a {characterEnemy.ReturnName()}.");
             characterEnemy.RecieveDamage(this.attack);
