@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    public class Wizard : Character
+    public class Wizard : Hero
     {
         public SpellBook spellBook {get; private set;}
         public Wizard(string name, SpellBook book)
@@ -12,6 +12,7 @@ namespace Library
             this.health = 50;
             this.attack = 25;
             this.armor = 35;
+            this.victoryPointsCounter = 0;
             this.inventory = new List<Item> {};
             this.spellBook = book;
         }
