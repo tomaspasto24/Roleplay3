@@ -9,23 +9,6 @@ namespace Library
     /// </summary>
     public class Knight : ICharacter
     {
-        private int health;
-        private int attack {get; set;}
-        private int armor {get; set;}
-        private string name {get;}
-        private List<Item> inventory {get; set;}
-        
-        public int Health
-        {
-            get
-            {
-                return this.health;
-            }
-            set
-            {
-                this.health = value;
-            }
-        }
         /// <summary>
         /// Constructor de la clase Knight
         /// </summary>
