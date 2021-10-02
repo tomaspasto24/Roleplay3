@@ -24,7 +24,7 @@ namespace Library
         }
         
         /// <summary>
-        /// Metodo para equipar un item pasado por parametro, que a su vez incrementa el ataque y defensa del Knight (dependiendo del item que sea).
+        /// Metodo para equipar un item pasado por parametro, que a su vez incrementa el ataque y defensa del character (dependiendo del item que sea).
         /// </summary>
         /// <param name="item">Item a equipar</param>
         public void EquipItem(Item item)
@@ -35,7 +35,7 @@ namespace Library
         }
 
         /// <summary>
-        /// Metodo para desequipar un item que pasemos por parametro, a su vez se decrementan las estadisticas correspondientes del Knight.
+        /// Metodo para desequipar un item que pasemos por parametro, a su vez se decrementan las estadisticas correspondientes del character.
         /// </summary>
         /// <param name="item">Item a desequipar</param>
         public void UnequipItem(Item item)
@@ -51,8 +51,8 @@ namespace Library
             Console.WriteLine($"-{(this.attack - (this.attack * characterEnemy.ReturnArmor()))} de vida a {characterEnemy.ReturnName()}");
         }
 
-                /// <summary>
-        /// Retorna la armadura del Dwarf
+        /// <summary>
+        /// Retorna la armadura del character
         /// </summary>
         /// <returns></returns>
         public int ReturnArmor()
@@ -60,7 +60,7 @@ namespace Library
             return this.armor;
         }
         /// <summary>
-        /// Retorna el ataque del Dwarf
+        /// Retorna el ataque del character
         /// </summary>
         /// <returns></returns>
         public int ReturnAttack()
@@ -68,7 +68,7 @@ namespace Library
             return this.attack;
         }
         /// <summary>
-        /// Retorna la vida actual del Dwarf
+        /// Retorna la vida actual del character
         /// </summary>
         /// <returns></returns>
         public int CurrentHealth()
@@ -76,7 +76,7 @@ namespace Library
             return this.health;
         }
         /// <summary>
-        /// Vuele a dejar en el estado inicial la vida del Dwarf.
+        /// Vuele a dejar en el estado inicial la vida del character.
         /// </summary>
         public void RestoreHealth()
         {
