@@ -18,7 +18,6 @@ namespace Test.Library
             Assert.IsNotNull(encounter);
             encounter.DoEncounter();
         }        
-        
         [Test]
         public void EncounterCharacters1()
         {

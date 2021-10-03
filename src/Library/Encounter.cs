@@ -118,7 +118,6 @@ namespace Library
                 Console.WriteLine("Los enemigos han ganado el encuentro.");
             }
         }
-
         public bool AllHeroesAreDead()
         {
             foreach (Hero hero in heroesList)
