@@ -9,7 +9,7 @@ namespace Test.Library
         public void CreateEncounter()
         {
             Encounter encounter = new Encounter();
-            Wizard wizard = new Wizard("Wizard");
+            Wizard wizard = new Wizard("Wizard", new SpellBook("El libro de los encantamientos."));
             Goblin goblin = new Goblin("Goblin");
         
             encounter.AddCharacter(wizard);
@@ -24,7 +24,7 @@ namespace Test.Library
         public void EncounterCharacters()
         {
             Encounter encounter = new Encounter();
-            Wizard wizard = new Wizard("Wizard");
+            Wizard wizard = new Wizard("Wizard",new SpellBook("El libro de los encantamientos."));
             Goblin goblin = new Goblin("Goblin");
         
             encounter.AddCharacter(wizard);
