@@ -11,7 +11,7 @@ namespace Test.Library
         {
             Knight knight = new Knight("Dark Knight");
             Sword item = new Sword("Espada");
-            int expectedDamage = 45;
+            int expectedDamage = 25 + 50;
             int expectedArmor = 35;
             knight.EquipItem(item);
 
@@ -25,8 +25,8 @@ namespace Test.Library
         {
             Knight knight = new Knight("Dark Knight");
             Armor item = new Armor("Armadura");
-            int expectedDamage = 25;
-            int expectedArmor = 55;
+            int expectedDamage = 25 + 20;
+            int expectedArmor = 35 + 80;
             knight.EquipItem(item);
 
             Assert.IsNotEmpty(knight.ReturnInventory());

@@ -50,7 +50,7 @@ namespace Library
                         
                         j = i;
 
-                        while (j > heroesList.Count || !(heroesList[j].CurrentHealth() > 0))
+                        while (j >= heroesList.Count || !(heroesList[j].CurrentHealth() > 0))
                         {
                             if (j == 0)
                             {
@@ -60,10 +60,14 @@ namespace Library
                         }
 
                         Hero hero = heroesList[j];
+                        Console.WriteLine($"El villano {villian.ReturnName()} ataca a {hero.ReturnName()}.");
                         villian.AttackEnemy(hero);
-                        Console.WriteLine($"El enemigo {villian.ReturnName()} ataca a {hero.ReturnName()}.");
+                        if (!(hero.CurrentHealth() > 0))
+                        {
+                            Console.WriteLine($"{villian.ReturnName()} ha matado a {hero.ReturnName()}");
+                        }
                     }
-
+                    Console.WriteLine();
                     // Ahora los heroes que quedaron vivos atacan a los enemigos.
                     // Todos los heroes sobrevivientes atacan a cada enemigo 1 vez.
                     foreach (Hero hero in heroesList)
@@ -84,9 +88,9 @@ namespace Library
                                 continue;
                             }
 
+                            Console.WriteLine($"El heroe {hero.ReturnName()} ataca a {villian.ReturnName()}.");
                             hero.AttackEnemy(villian);
-                            Console.WriteLine($"El enemigo {hero.ReturnName()} ataca a {villian.ReturnName()}.");
-                            
+                                                        
                             if  (!(villian.CurrentHealth() > 0))
                             {
                                 Console.WriteLine($"{hero.ReturnName()} ha matado a {villian.ReturnName()}");
@@ -99,6 +103,7 @@ namespace Library
                                 }
                             }
                         }
+                        Console.WriteLine();
                     }
                 }
             }

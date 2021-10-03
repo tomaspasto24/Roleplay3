@@ -13,7 +13,7 @@ namespace Test.Library
         {
             Sword item = new Sword("Espada de fuego");
             string expecetedName = "Espada de fuego";
-            int expecetedDamage = 30;
+            int expecetedDamage = 50;
             int expectedArmor = 0;
 
             Assert.AreEqual(item.ReturnName(), expecetedName);
@@ -26,8 +26,8 @@ namespace Test.Library
         {
             Armor item = new Armor("Armadura de caballero");
             string expecetedName = "Armadura de caballero";
-            int expecetedDamage = 0;
-            int expectedArmor = 40;
+            int expecetedDamage = 20;
+            int expectedArmor = 80;
 
             Assert.AreEqual(item.ReturnName(), expecetedName);
             Assert.AreEqual(item.ReturnDamage(), expecetedDamage);

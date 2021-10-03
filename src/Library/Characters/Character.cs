@@ -46,9 +46,8 @@ namespace Library
         }
         public void AttackEnemy(Character characterEnemy)
         {
-            Console.WriteLine($"Se atacó a {characterEnemy.ReturnName()}.");
             characterEnemy.RecieveDamage(this.attack);
-            Console.WriteLine($"-{(this.attack - (this.attack * characterEnemy.ReturnArmor()))} de vida a {characterEnemy.ReturnName()}");
+            Console.WriteLine($"-{this.attack} de vida a {characterEnemy.ReturnName()}");
         }
 
         /// <summary>

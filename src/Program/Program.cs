@@ -67,6 +67,7 @@ namespace Program
             brujo.EquipItem(daga);
 
             brujo.AttackEnemy(elf1);
+            
         }
     }
 }

@@ -31,7 +31,7 @@ namespace Test.Library
             Elf elfa = new Elf("Idril");
             Sword itemAtaque = new Sword("Espada de Fuego");
             elfa.EquipItem(itemAtaque);
-            int expectedAttack = 35 + 15;
+            int expectedAttack = 35 + 50;
             int expectedArmor = 5;
             Assert.IsNotEmpty(elfa.ReturnInventory());
             Assert.AreEqual(expectedAttack, elfa.ReturnAttack());
@@ -44,8 +44,8 @@ namespace Test.Library
             Elf elfa = new Elf("Idril");
             Armor itemArmor = new Armor("Armadura");
             elfa.EquipItem(itemArmor);
-            int expectedAttack = 35 + 15;
-            int expectedArmor = 5;
+            int expectedAttack = 35 + 20;
+            int expectedArmor = 5 + 80;
             Assert.IsNotEmpty(elfa.ReturnInventory());
             Assert.AreEqual(expectedAttack, elfa.ReturnAttack());
             Assert.AreEqual(expectedArmor, elfa.ReturnArmor());
@@ -57,11 +57,11 @@ namespace Test.Library
             Elf elfa = new Elf("Idril");
             Sword itemAtaque = new Sword("Espada de Fuego");
             elfa.EquipItem(itemAtaque);
-            int expectedAttack = 35 + 15;
+            int expectedAttack = 35 + 50;
             Assert.AreEqual(expectedAttack, elfa.ReturnAttack());
             
             elfa.UnequipItem(itemAtaque);
-            expectedAttack = 50 - 15;
+            expectedAttack = 85 - 50;
             Assert.AreEqual(expectedAttack, elfa.ReturnAttack());
             Assert.IsEmpty(elfa.ReturnInventory());
         }
